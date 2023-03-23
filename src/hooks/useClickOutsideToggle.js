@@ -9,11 +9,13 @@ const useClickOutsideToggle = () => {
         setExpanded(false);
       }
     };
+
     document.addEventListener("mouseup", handleClickOutside);
     return () => {
       document.removeEventListener("mouseup", handleClickOutside);
     };
   }, [ref]);
+
   return { expanded, setExpanded, ref };
 };
 
